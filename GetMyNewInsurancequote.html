@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmers Insurance Quote</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #E8ECEF; /* Light Gray background */
+        }
+
+        header {
+            background-color: #003087; /* Dark Blue */
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header div {
+            font-size: 1.2rem;
+            margin: 0.5rem 0; /* Added vertical spacing */
+        }
+
+        nav {
+            background-color: #0033A0; /* Blue */
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav img {
+            vertical-align: middle;
+            max-width: 30px;
+            height: auto;
+            margin: 0 0.5rem;
+        }
+
+        nav span {
+            font-size: 1.1rem;
+            color: white;
+        }
+
+        .hero {
+            background-color: #E8ECEF; /* Light Gray */
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            color: #0033A0; /* Blue */
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #003087; /* Dark Blue */
+            margin-bottom: 1.5rem;
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #0033A0; /* Blue */
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 1rem;
+            color: #003087; /* Dark Blue */
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #B22234; /* Red for focus */
+        }
+
+        .business-fields {
+            display: none;
+        }
+
+        .business-fields.active {
+            display: block;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background-color: #B22234; /* Red */
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #003087; /* Dark Blue on hover */
+        }
+
+        .services {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .services h2 {
+            font-size: 1.8rem;
+            color: #0033A0; /* Blue */
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .services p {
+            font-size: 1.1rem;
+            color: #003087; /* Dark Blue */
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: #003087; /* Dark Blue */
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            header div {
+                font-size: 1rem;
+            }
+
+            nav img {
+                max-width: 25px;
+            }
+
+            nav span {
+                font-size: 1rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .form-container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const insuranceType = document.getElementById('insurance-type');
+            const businessFields = document.querySelector('.business-fields');
+            const businessNameInput = document.getElementById('business-name');
+            const businessAddressInput = document.getElementById('business-address');
+
+            insuranceType.addEventListener('change', function() {
+                if (this.value === 'business') {
+                    businessFields.classList.add('active');
+                    businessNameInput.required = true;
+                    businessAddressInput.required = true;
+                } else {
+                    businessFields.classList.remove('active');
+                    businessNameInput.required = false;
+                    businessAddressInput.required = false;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div>Office: 210.239.1360        Cell: 210.786.0854        Email: Luis.Rreyna1@farmersagency.com</div>
+    </header>
+    <nav>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg" alt="Texas Flag">
+        <span>Servicing the Lone Star State</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg" alt="Texas Flag">
+    </nav>
+    <section class="hero">
+        <h2>Get Your Free Insurance Quote Today</h2>
+        <p>Protect what matters most with Farmers Insurance. Fast, personalized quotes for Homeowners, Auto, Life, Business, and Motorcycle & Recreational insurance.</p>
+    </section>
+    <section class="form-container">
+        <h3>Request Your Free Quote</h3>
+        <form action="https://formsubmit.co/luis.rreyna1@farmersagency.com" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Home Address</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="form-group">
+                <label for="insurance-type">Type of Insurance</label>
+                <select id="insurance-type" name="insurance-type" required>
+                    <option value="">Select Insurance Type</option>
+                    <option value="homeowners">Homeowners Insurance</option>
+                    <option value="auto">Auto Insurance</option>
+                    <option value="life">Life Insurance</option>
+                    <option value="business">Business Insurance</option>
+                    <option value="motorcycle-recreational">Motorcycle & Recreational Insurance</option>
+                </select>
+            </div>
+            <div class="form-group business-fields">
+                <label for="business-name">Business Name</label>
+                <input type="text" id="business-name" name="business-name" required>
+            </div>
+            <div class="form-group business-fields">
+                <label for="business-address">Business Address</label>
+                <input type="text" id="business-address" name="business-address" required>
+            </div>
+            <input type="hidden" name="_next" value="https://luisinsurance.netlify.app/thankyou.html">
+            <input type="hidden" name="_captcha" value="false">
+            <button type="submit" class="cta-button">Get My Free Quote</button>
+        </form>
+    </section>
+    <section class="services">
+        <h2>Our Insurance Services</h2>
+        <p><strong>Homeowners Insurance:</strong> Protect your home and valuables with comprehensive coverage tailored to your needs, including coverage for jewelry and collectibles (additional coverage may be required for high-value items).</p>
+        <p><strong>Auto Insurance:</strong> Enjoy peace of mind on the road with our Auto insurance, offering discounts and fast claim services trusted by over 4,000 customers daily.</p>
+        <p><strong>Life Insurance:</strong> Secure your family’s future with Life insurance policies starting as low as $14 per month for a $250,000 policy.</p>
+        <p><strong>Business Insurance:</strong> Safeguard your business with customized coverage for property, liability, and more, designed to set your business apart.</p>
+        <p><strong>Motorcycle & Recreational Insurance:</strong> From motorcycles to RVs, our Motorcycle & Recreational insurance protects your unique assets with flexible options.</p>
+        <p>With Farmers Insurance, you get personalized attention, 24/7 award-winning claims service, and innovative programs like Signal for Auto insurance discounts. Contact a local Farmers agent to explore your options and get tailored coverage today.</p>
+    </section>
+    <footer>
+        <p>© 2025 Farmers Insurance. All rights reserved.</p>
+    </footer>
+</body>
+</html>
